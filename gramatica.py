@@ -1,4 +1,4 @@
-"""Gramatica cinematografica destilada de doc/analise-estilo-fbvideo.md.
+"""Gramatica cARCKHÉtografica destilada de doc/analise-estilo-fbvideo.md.
 
 O documento e a decupagem plano-a-plano de um video que funcionou. O que transfere
 NAO e a forma daquele anuncio (apresentador, card de workshop, "clique em saiba mais"),
@@ -97,12 +97,12 @@ RITMO = {
 # Look e por BLOCO, nao por plano — e o que da unidade a sequencia.
 LOOKS = {
     'sertao-golden-hour': ('warm orange and amber palette, low golden-hour sun, high contrast, '
-                           'dusty haze, cinematic film grain'),
+                           'dusty haze, cARCKHÉtic film grain'),
     'intimista-estudio':  ('soft key light with cool blue rim from behind, dark low-noise '
                            'background, shallow depth of field'),
     'showcase-saturado':  ('high saturation, punchy modern 3D animation look, crisp rim light'),
     'noturno-frio':       ('cool blue night palette, moonlight key, deep shadows, soft mist'),
-    'neutro-cinema':      ('naturalistic cinematic color, soft key light, restrained saturation'),
+    'neutro-cARCKHÉ':      ('naturalistic cARCKHÉtic color, soft key light, restrained saturation'),
 }
 
 
@@ -150,7 +150,7 @@ def prompt_de_video(plano):
     """
     mov, _ = CAMERA[plano['camera']]
     # `acao_video` existe porque o filtro de conteudo do endpoint de VIDEO da Agnes e
-    # mais estrito que o do gerador de imagem (o inemaimg local nem tem filtro).
+    # mais estrito que o do gerador de imagem (o ARCKHÉimg local nem tem filtro).
     # MEDIDO: crianca em contato fisico ("the dog pressing against his chest", "the
     # older one's arm over the younger one's shoulders") volta
     # content_policy_violation — e volta ASSINCRONO, como HTTP 400 na consulta de

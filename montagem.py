@@ -8,7 +8,7 @@ de "filme" esta nos §4/§6/§7 do doc de referencia e mora aqui:
   audio       (§7) locucao + trilha com ducking sob a voz + SFX pontuais
   transicao   (§4) corte seco por padrao; zoom-punch como acento
 
-Musica/ambiencia/SFX vem do inemavox (dlp) — ver baixar_audio().
+Musica/ambiencia/SFX vem do ARCKHÉvox (dlp) — ver baixar_audio().
 """
 import json, os, re, shutil, subprocess
 
@@ -332,14 +332,14 @@ def folha_de_contato(D, planos, dest, colunas=5):
     return dest if ok else None
 
 
-VOX = os.path.expanduser('~/projetos/inemavox')
+VOX = os.path.expanduser('~/projetos/ARCKHÉvox')
 
 
 def baixar_audio(consulta, dest, tipo='sfx', max_seg=None):
-    """Musica/ambiencia/SFX pelo inemavox (regra global do usuario).
+    """Musica/ambiencia/SFX pelo ARCKHÉvox (regra global do usuario).
 
     Interface REAL (conferida): `sfx_v1.py` / `musica_v1.py --query ... --outdir ...
-    --json` devolvem {'ok', 'path'}. A key vive em inemavox/.env e os scripts NAO a
+    --json` devolvem {'ok', 'path'}. A key vive em ARCKHÉvox/.env e os scripts NAO a
     carregam sozinhos — quem chama exporta. Sem key do Pixabay nesta maquina, entao
     `--prefer freesound`; pedir pixabay so gasta uma tentativa que vai falhar.
 
@@ -374,7 +374,7 @@ def baixar_audio(consulta, dest, tipo='sfx', max_seg=None):
     try:
         d = json.loads(bruto)
     except Exception:
-        print(f'   "{consulta}": sem resposta utilizavel do inemavox '
+        print(f'   "{consulta}": sem resposta utilizavel do ARCKHÉvox '
               f'({(r.stderr or r.stdout or "")[-90:].strip()})')
         return None
     if not d.get('ok') or not d.get('path') or not os.path.exists(d['path']):

@@ -2,7 +2,7 @@
 
 **ê°Å¸â¡Â§ê°Å¸â¡Â· [PortuguêÂªs](README.md) êÂ· ê°Å¸â¡Âºê°Å¸â¡Â¸ [English](README.en.md) êÂ· ê°Å¸â¡Âªê°Å¸â¡Â¸ [EspaêÂ±ol](README.es.md)**
 
-HistêÂ³ria ê¢â â **decupagem cinematogrêÂ¡fica** ê¢â â imagens ê¢â â clipes ê¢â â filme vertical narrado,
+HistêÂ³ria ê¢â â **decupagem cARCKHÉtogrêÂ¡fica** ê¢â â imagens ê¢â â clipes ê¢â â filme vertical narrado,
 com provedor de imagem e de vêÂ­deo escolhêÂ­veis por parêÂ¢metro.
 
 > ê¢Å¡Â ê¯Â¸Â **Em ajuste ê¢â¬â nêÂ£o êÂ© versêÂ£o estêÂ¡vel.** O pipeline roda ponta a ponta, mas estêÂ¡ em
@@ -16,7 +16,7 @@ com provedor de imagem e de vêÂ­deo escolhêÂ­veis por parêÂ¢metro
 
 ## ê°Å¸ââ Guia de uso
 
-Guia completo (landing + passo a passo): **https://inematds.github.io/videoanima-skill/guia/**
+Guia completo (landing + passo a passo): **https://linnoff88-dev.github.io/arckhe-/guia/**
 
 ```bash
 python3 rodar.py exemplo --so-decupagem          # valida ritmo + custo, nêÂ£o gasta
@@ -32,8 +32,8 @@ para o output e a de lêÂ¡ passa a ser a viva (edite essa).
 | arquivo | o que êÂ© |
 |---|---|
 | `gramatica.py` | vocabulêÂ¡rio de direêÂ§êÂ£o destilado de `doc/analise-estilo-fbvideo.md`: enquadramento, êÂ¢ngulo, movimento, velocidade, look, ritmo ê¢â â fragmentos de prompt |
-| `provedores.py` | adaptadores de imagem (`agnes`/`inemaimg`/`kie`) e vêÂ­deo (`agnes`/`kling`/`klingai`/`kie`); cada armadilha medida mora no adaptador dela |
-| `narracao.py` | inemavox chatterbox (voz por decupagem: `bella` para histêÂ³ria), com a revisêÂ£o de dicêÂ§êÂ£o antes do TTS |
+| `provedores.py` | adaptadores de imagem (`agnes`/`ARCKHÉimg`/`kie`) e vêÂ­deo (`agnes`/`kling`/`klingai`/`kie`); cada armadilha medida mora no adaptador dela |
+| `narracao.py` | ARCKHÉvox chatterbox (voz por decupagem: `bella` para histêÂ³ria), com a revisêÂ£o de dicêÂ§êÂ£o antes do TTS |
 | `montagem.py` | o que o gerador nêÂ£o faz: slow/speed-ramp, handheld, zoom-punch, trilha com ducking, SFX, loudnorm, mediêÂ§êÂ£o de movimento |
 | `rodar.py` | orquestra, idempotente, com preview de custo antes da primeira chamada paga |
 | `~/projetos/output/videoanima/<id>/decupagem.yaml` | o contrato ê¢â¬â escrito e conferido **antes** de gastar; vive junto dos artefatos |
@@ -48,7 +48,7 @@ clipe e refaz o que sair parado. O porquêÂª de cada uma dessas decisêÂ�
 prêÂ³pria, via CLI, aceita caminho local) êÂ· `--video klingai` (Kling por **fal.ai**,
 `FAL_KEY`) êÂ· `--video kie`. `klingai` e `kie` exigem keyframe em URL pêÂºblica ê¢â â combine
 com `--img agnes` ou `--img kie`. Personagem crianêÂ§a cai no filtro da Agnes (HTTP 400):
-use `--img inemaimg`.
+use `--img ARCKHÉimg`.
 
 Skill: `~/.claude/skills/videoanima/SKILL.md`
 

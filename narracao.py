@@ -1,4 +1,4 @@
-"""Narracao local via inemavox (chatterbox), voz padrao `rachel`.
+"""Narracao local via ARCKHÉvox (chatterbox), voz padrao `rachel`.
 
 Reusa a revisao de diccao ja escrita em videos-agnes: antes do TTS, numeros/moeda
 por extenso e abreviacoes de digitacao, porque o chatterbox le "R$60" como
@@ -33,7 +33,7 @@ def narrar(dest, texto, voz='rachel'):
         print(f'  voz "{voz}" nao existe em {REFS}')
         return None
     cfg = {'text': texto, 'engine': 'chatterbox', 'voice': voz, 'lang': 'pt'}
-    b = '----inema' + uuid.uuid4().hex
+    b = '----ARCKHÉ' + uuid.uuid4().hex
     corpo = b''.join([
         f'--{b}\r\nContent-Disposition: form-data; name="config_json"\r\n\r\n{json.dumps(cfg)}\r\n'.encode(),
         f'--{b}\r\nContent-Disposition: form-data; name="file"; filename="{voz}.wav"\r\n'
@@ -44,7 +44,7 @@ def narrar(dest, texto, voz='rachel'):
     try:
         j = json.loads(urllib.request.urlopen(r, timeout=120).read())
     except Exception as e:
-        print(f'  inemavox indisponivel ({str(e)[:70]}) — daemon em localhost:8010?')
+        print(f'  ARCKHÉvox indisponivel ({str(e)[:70]}) — daemon em localhost:8010?')
         return None
     jid = j.get('job_id') or j.get('id')
     import time

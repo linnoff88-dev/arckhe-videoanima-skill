@@ -2,7 +2,7 @@
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
-Story → **cinematic shot breakdown** → images → clips → narrated vertical film,
+Story → **cARCKHÉtic shot breakdown** → images → clips → narrated vertical film,
 with image and video providers selectable via parameters.
 
 > ⚠️ **Under adjustment — not a stable release.** The pipeline runs end to end, but it is in an open correction cycle based on the films it has produced. The first cut came out poorly (static scenes, inconsistent character, choppy narration); what was measured and what has already changed as a result are documented in
@@ -11,7 +11,7 @@ with image and video providers selectable via parameters.
 
 ## 📖 User Guide
 
-Complete guide (landing page + step-by-step instructions): **https://inematds.github.io/videoanima-skill/guia/en/**
+Complete guide (landing page + step-by-step instructions): **https://linnoff88-dev.github.io/arckhe-/guia/en/**
 
 ```bash
 python3 rodar.py exemplo --so-decupagem          # validates pacing + cost, does not spend
@@ -27,8 +27,8 @@ to the output, and the copy there becomes the active one (edit that one).
 | file | what it is |
 |---|---|
 | `gramatica.py` | directing vocabulary distilled from `doc/analise-estilo-fbvideo.md`: framing, angle, movement, speed, look, pacing → prompt fragments |
-| `provedores.py` | image adapters (`agnes`/`inemaimg`/`kie`) and video adapters (`agnes`/`kling`/`klingai`/`kie`); each measured pitfall lives in its own adapter |
-| `narracao.py` | inemavox chatterbox (voice per shot breakdown: `bella` for stories), with diction review before TTS |
+| `provedores.py` | image adapters (`agnes`/`ARCKHÉimg`/`kie`) and video adapters (`agnes`/`kling`/`klingai`/`kie`); each measured pitfall lives in its own adapter |
+| `narracao.py` | ARCKHÉvox chatterbox (voice per shot breakdown: `bella` for stories), with diction review before TTS |
 | `montagem.py` | what the generator does not: slow/speed-ramp, handheld, zoom-punch, ducked soundtrack, SFX, loudnorm, motion measurement |
 | `rodar.py` | orchestrates, idempotent, with a cost preview before the first paid call |
 | `~/projetos/output/videoanima/<id>/decupagem.yaml` | the contract — written and checked **before** spending; lives alongside the artifacts |
@@ -37,6 +37,6 @@ to the output, and the copy there becomes the active one (edit that one).
 **Motion is what separates film from slideshow.** Each shot has `acao` as a continuous verb and `acao_b` (where the gesture ends) — the difference between A and B is what the generator animates. There is a negative prompt against `still frame` and a gate that measures the motion of each clip and recreates anything that comes out static. The post-mortem explains the reason for each of these decisions.
 
 **Video:** `--video agnes` (US$ 0, batch submission) · `--video kling` (own subscription, via CLI, accepts a local path) · `--video klingai` (Kling via **fal.ai**,
-`FAL_KEY`) · `--video kie`. `klingai` and `kie` require a keyframe at a public URL → pair with `--img agnes` or `--img kie`. A child character gets caught by Agnes's filter (HTTP 400): use `--img inemaimg`.
+`FAL_KEY`) · `--video kie`. `klingai` and `kie` require a keyframe at a public URL → pair with `--img agnes` or `--img kie`. A child character gets caught by Agnes's filter (HTTP 400): use `--img ARCKHÉimg`.
 
 Skill: `~/.claude/skills/videoanima/SKILL.md`

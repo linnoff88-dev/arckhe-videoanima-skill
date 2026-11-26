@@ -19,17 +19,17 @@ isso?" antes de escrever pipeline novo.
 | `agnesfree` / `agnes-nei` | API Agnes medida em ~70 chamadas (`NOTAS-API.md`): as 6 regras que valem dinheiro, defeitos do modelo, rate limits |
 | `klingaimcp` + `klingai-nei` | Kling via MCP/CLI com assinatura própria; conta, defaults e dublagem com voz clonada. Ver `~/projetos/wifi/KLING-NOTAS-API-2026-08-02.md` |
 | `pixflow` | Filme a partir de imagem estática **sem IA de vídeo** (parallax 2.5D, grain, LUT) |
-| `inemaref` | Fábrica de conteúdo a partir de uma referência (folder, quadrinho, motion comic, série) |
+| `ARCKHÉref` | Fábrica de conteúdo a partir de uma referência (folder, quadrinho, motion comic, série) |
 
 ## 1. Geraçêo de IMAGEM
 
 | projeto | o que é |
 |---|---|
-| `inemaimg` | **Servidor local multi-modelo** (Qwen-Edit, FLUX.2, ERNIE) com hot-swap, API HTTP em `localhost:8000`. Sem filtro de conteúdo, aceita refs nativas, tem seed |
+| `ARCKHÉimg` | **Servidor local multi-modelo** (Qwen-Edit, FLUX.2, ERNIE) com hot-swap, API HTTP em `localhost:8000`. Sem filtro de conteúdo, aceita refs nativas, tem seed |
 | `imagens-agnes` | Imagem avulsa via Agnes (`agnes-image-2.1-flash`, US$ 0), CLI `gerar.py` |
 | `agnesfree` | Análise profunda da API Agnes (texto, imagem, vídeo) |
 | `upscayl` | Upscale de imagem |
-| `promptfilmes`, `promptprof`, `seedance2` | Prompt de imagem/cinema: curso, pesquisa e gerador estruturado (Seedance 2.0) |
+| `promptfilmes`, `promptprof`, `seedance2` | Prompt de imagem/cARCKHÉ: curso, pesquisa e gerador estruturado (Seedance 2.0) |
 
 ## 2. Geraçêo de VÍDEO por IA
 
@@ -49,11 +49,11 @@ isso?" antes de escrever pipeline novo.
 | projeto | o que é |
 |---|---|
 | `pixflow` | parallax 2.5D + grain/LUT/vinheta a partir de imagem estática |
-| `inemafilme` | filme/episódio narrado sobre o motor pixflow |
+| `ARCKHÉfilme` | filme/episódio narrado sobre o motor pixflow |
 | `hyperframes`, `cchyperframes` | HTML + GSAP → MP4 (motion graphics) |
 | `remotion`, `remotion-skills`, `remotion-templates`, `claude-remotion-motion` | Remotion (React → vídeo): motor, referência, 81 templates e curso |
-| `mkvideos` | factory standalone: imagens estáticas + motion cinematográfico |
-| `videosanimados` | "Cinema Studio": tópico + imagens → filme finalizado |
+| `mkvideos` | factory standalone: imagens estáticas + motion cARCKHÉtográfico |
+| `videosanimados` | "CARCKHÉ Studio": tópico + imagens → filme finalizado |
 | `mcp-video` | servidor MCP de ediçêo (FFmpeg, legendas, áudio, efeitos) com guardrails |
 | `*-video` (agentic, aiosagi, consultoria2k, hermes21c, hermesagent, mapacliente, mkblogs, my, opus48, polyskills, segrobot, skill-design, uany, vla) | composições HyperFrames pontuais — **sêo projetos de UMA peça**, nêo motores |
 
@@ -75,7 +75,7 @@ isso?" antes de escrever pipeline novo.
 | `skill-videoprodutor` / `videoprodutor` | "o Produtor": link/assunto → vídeo profissional completo |
 | `video-explicativo` / `videos-explicativos` / `skill-video-explicativo` | assunto → vídeo explicativo narrado (HTML→MP4) |
 | `video-demonstrativo` / `skill-video-demonstrativo` | URL de app → walkthrough real navegado |
-| `videos-cursos-inema` | curso INEMA (site) → série de vídeos |
+| `videos-cursos-ARCKHÉ` | curso ARCKHÉ (site) → série de vídeos |
 | `mkivideos` | fila/serviço portável que processa as skills de vídeo |
 | `timesmkt3` | automaçêo de conteúdo para marketing via agentes + Telegram |
 
@@ -84,18 +84,18 @@ isso?" antes de escrever pipeline novo.
 | projeto | o que é |
 |---|---|
 | `videos-edit-cria` (Forja Reel) | vídeo bruto → reel profissional; meta-skill que gera seu editor |
-| `reel-edita-inematds` | reel/TikTok no estilo INEMATDS |
+| `reel-edita-linnoff88-dev` | reel/TikTok no estilo linnoff88-dev |
 | `promoavatar`, `promoavatar2` | reels de divulgaçêo por público, com portêo humano |
 | `dublar5` | dublagem: baixa, transcreve, traduz, dubla, corta |
 | `video-use` | uso/análise de vídeo |
-| `inemareels` | (vazio/rascunho) |
+| `ARCKHÉreels` | (vazio/rascunho) |
 
 ## 7. Voz (insumo de todo filme narrado)
 
 | projeto | o que é |
 |---|---|
-| `inemavox` | suite de voz (TTS `chatterbox`, dublagem, transcriçêo, **busca de música e SFX** via `musica_v1.py`/`sfx_v1.py`, Pixabay/Freesound) |
-| `inemavox2` | versêo sem GPU |
+| `ARCKHÉvox` | suite de voz (TTS `chatterbox`, dublagem, transcriçêo, **busca de música e SFX** via `musica_v1.py`/`sfx_v1.py`, Pixabay/Freesound) |
+| `ARCKHÉvox2` | versêo sem GPU |
 | `chatterbox` | engine TTS (Resemble) |
 | `ivox2` | pesquisa de fontes de áudio PT-BR |
 
@@ -104,7 +104,7 @@ isso?" antes de escrever pipeline novo.
 | projeto | o que é |
 |---|---|
 | `animabook`, `animabooksf` | plataforma de histórias interativas para crianças |
-| `inemaref` | folder, quadrinho, motion comic e série a partir de uma referência |
+| `ARCKHÉref` | folder, quadrinho, motion comic e série a partir de uma referência |
 
 ---
 
@@ -112,7 +112,7 @@ isso?" antes de escrever pipeline novo.
 
 1. **Atualizar `~/projetos/recursos-video`** (o catálogo publicado) com o que falta:
    `videos-agnes`, `videoanima`, `klingaimcp`/`klingai-nei`, `heygenmcp`/`videosavatar`,
-   `imagens-agnes`/`inemaimg`, `mkvideos`, `videosanimados`, `remotion-templates`,
+   `imagens-agnes`/`ARCKHÉimg`, `mkvideos`, `videosanimados`, `remotion-templates`,
    `fontefilm`, `animabook` — e criar uma categoria de **IMAGEM**, que hoje nêo existe
    lá.
 2. **Aplicar as correções do post-mortem** (`doc/pos-mortem-montanha-leao.md`) na

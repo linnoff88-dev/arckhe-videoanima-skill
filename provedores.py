@@ -1,6 +1,6 @@
 """Provedores de IMAGEM e VIDEO atras de uma interface unica.
 
-IMAGEM  : agnes | inemaimg | kie
+IMAGEM  : agnes | ARCKHÉimg | kie
 VIDEO   : agnes | klingai | kie
 
 Contrato:
@@ -104,7 +104,7 @@ def img_agnes(dest, prompt, refs=None, size='736x1312', tentativas=5):
     return None
 
 
-def img_inemaimg(dest, prompt, refs=None, size='736x1312', modelo='flux2-klein', base='http://localhost:8000'):
+def img_ARCKHÉimg(dest, prompt, refs=None, size='736x1312', modelo='flux2-klein', base='http://localhost:8000'):
     """Servidor local (DGX). Custo zero e sem rate limit, mas exige o container no ar.
 
     Vantagem real sobre a Agnes: aceita imagens de referencia com LoRA
@@ -142,8 +142,8 @@ def img_inemaimg(dest, prompt, refs=None, size='736x1312', modelo='flux2-klein',
     try:
         d = _post(f'{base}/generate', body, {}, timeout=600)
     except Exception as e:
-        print(f'    inemaimg falhou: {str(e)[:120]}', flush=True)
-        print(f'    (servidor no ar? `cd ~/projetos/inemaimg && docker compose up -d`)', flush=True)
+        print(f'    ARCKHÉimg falhou: {str(e)[:120]}', flush=True)
+        print(f'    (servidor no ar? `cd ~/projetos/ARCKHÉimg && docker compose up -d`)', flush=True)
         return None
     b64 = d.get('image') or (d.get('images') or [None])[0]
     if not b64:
@@ -412,11 +412,11 @@ def vid_kie(dest, kf_a, kf_b, prompt, seg, modelo='veo3_fast'):
 
 
 # ================================================================== registro ==
-IMAGEM = {'agnes': img_agnes, 'inemaimg': img_inemaimg, 'kie': img_kie}
+IMAGEM = {'agnes': img_agnes, 'ARCKHÉimg': img_ARCKHÉimg, 'kie': img_kie}
 VIDEO = {'agnes': vid_agnes, 'kling': vid_kling, 'klingai': vid_klingai, 'kie': vid_kie}
 
 # Custo estimado, para o preview antes de gastar. Fonte: wiki cerebro-vip.
-CUSTO_IMG = {'agnes': 0.0, 'inemaimg': 0.0, 'kie': 0.05}          # US$ por imagem
+CUSTO_IMG = {'agnes': 0.0, 'ARCKHÉimg': 0.0, 'kie': 0.05}          # US$ por imagem
 # 'kling' = assinatura Pro/SVIP do usuario: consome CREDITOS do plano, nao dolar
 # avulso — por isso 0.0 aqui; o preview de custo nao mede credito.
 CUSTO_VID_SEG = {'agnes': 0.0, 'kling': 0.0, 'klingai': 0.076, 'kie': 0.05}

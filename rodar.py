@@ -1,6 +1,6 @@
 """historia (decupagem.yaml) -> filme.
 
-    python3 rodar.py <pasta-da-historia> [--img agnes|inemaimg|kie]
+    python3 rodar.py <pasta-da-historia> [--img agnes|ARCKHÉimg|kie]
                                          [--video agnes|klingai|kie]
                                          [--so-decupagem] [--sim]
 
@@ -171,7 +171,7 @@ def main():
     ficha = lambda x: (x.get('imutavel') or x.get('prompt') or '').strip()
     person = {p['id']: ficha(p) for p in elenco}
     person.update({amb['id']: ficha(amb) for amb in ambientes})
-    look_pad = S.get('look', {}).get('global', 'neutro-cinema')
+    look_pad = S.get('look', {}).get('global', 'neutro-cARCKHÉ')
     # LOOK POR BLOCO: o look global dizia literalmente "daylight" e os 50 planos
     # herdavam — a busca do fim de tarde e a chegada noturna saiam com luz de meio-dia.
     # `blocos: [{planos: [1, 8], look: "..."}]` pinta a faixa; o plano ainda pode ter
@@ -222,7 +222,7 @@ def main():
         alvo = [p['id'] for p in elenco if any(w in ficha(p).lower() for w in CRIANCA)]
         if alvo:
             print(f'  ⚠️  personagem-criança na Agnes ({alvo}): o filtro de conteúdo '
-                  f'bloqueia (400).\n      Use --img inemaimg (local, sem filtro) '
+                  f'bloqueia (400).\n      Use --img ARCKHÉimg (local, sem filtro) '
                   f'ou reescreva como personagem nêo-humano.')
     for p in elenco + ambientes:
         pid, png = p['id'], f"{D}/img/anc-{p['id']}.png"
@@ -261,7 +261,7 @@ def main():
             png = f'{D}/img/{kid}.png'
             if kid in E['urls'] and os.path.exists(png):
                 continue
-            teto = 4 if a.img == 'inemaimg' else 2      # flux2-klein aceita 4 refs
+            teto = 4 if a.img == 'ARCKHÉimg' else 2      # flux2-klein aceita 4 refs
             refs = [E['urls'][r] for r in pl.get('refs', []) if r in E['urls']]
             amb = pl.get('ambiente')
             if amb and amb in E['urls']:
@@ -391,7 +391,7 @@ def main():
     os.makedirs(f'{D}/audio', exist_ok=True)
     trilha = (S.get('audio', {}) or {}).get('trilha') or ''
     if trilha and not os.path.exists(trilha):
-        # texto que nao e caminho e CONSULTA: 'cinematic tension' vira busca
+        # texto que nao e caminho e CONSULTA: 'cARCKHÉtic tension' vira busca
         seg_total = sum(p['dur'] for p in planos)
         alvo = f'{D}/audio/trilha.wav'
         r = M.baixar_audio(trilha, alvo, tipo='musica', max_seg=max(60, seg_total * 2))

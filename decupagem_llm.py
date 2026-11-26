@@ -17,7 +17,7 @@ import gramatica as G
 OLLAMA = 'http://localhost:11434/api/generate'
 OUT_BASE = os.path.expanduser('~/projetos/output/videoanima')
 
-REGRAS = """Você escreve DECUPAGEM CINEMATOGRÁFICA para um pipeline que transforma
+REGRAS = """Você escreve DECUPAGEM CARCKHÉTOGRÁFICA para um pipeline que transforma
 texto em filme animado vertical. A saída é YAML puro, sem comentários fora do YAML e
 sem texto antes ou depois.
 

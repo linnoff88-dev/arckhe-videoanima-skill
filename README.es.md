@@ -2,7 +2,7 @@
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
-Historia → **desglose cinematográfico** → imágenes → clips → película vertical narrada,
+Historia → **desglose cARCKHÉtográfico** → imágenes → clips → película vertical narrada,
 con proveedor de imagen y de video seleccionables mediante parámetros.
 
 > ⚠️ **En ajustes — no es una versión estable.** El pipeline se ejecuta de principio a fin, pero está en un
@@ -16,7 +16,7 @@ con proveedor de imagen y de video seleccionables mediante parámetros.
 
 ## 📖 Guía de uso
 
-Guía completa (landing + paso a paso): **https://inematds.github.io/videoanima-skill/guia/es/**
+Guía completa (landing + paso a paso): **https://linnoff88-dev.github.io/arckhe-/guia/es/**
 
 ```bash
 python3 rodar.py exemplo --so-decupagem          # valida el ritmo + el costo, no gasta
@@ -32,8 +32,8 @@ a output y el de allí pasa a ser el vigente (edítalo).
 | archivo | qué es |
 |---|---|
 | `gramatica.py` | vocabulario de dirección destilado de `doc/analise-estilo-fbvideo.md`: encuadre, ángulo, movimiento, velocidad, look, ritmo → fragmentos de prompt |
-| `provedores.py` | adaptadores de imagen (`agnes`/`inemaimg`/`kie`) y video (`agnes`/`kling`/`klingai`/`kie`); cada trampa detectada está en su adaptador |
-| `narracao.py` | inemavox chatterbox (voz por desglose: `bella` para historia), con la revisión de dicción antes del TTS |
+| `provedores.py` | adaptadores de imagen (`agnes`/`ARCKHÉimg`/`kie`) y video (`agnes`/`kling`/`klingai`/`kie`); cada trampa detectada está en su adaptador |
+| `narracao.py` | ARCKHÉvox chatterbox (voz por desglose: `bella` para historia), con la revisión de dicción antes del TTS |
 | `montagem.py` | lo que el generador no hace: slow/speed-ramp, handheld, zoom-punch, pista con ducking, SFX, loudnorm, medición de movimiento |
 | `rodar.py` | orquesta, es idempotente y muestra una estimación de costos antes de la primera llamada paga |
 | `~/projetos/output/videoanima/<id>/decupagem.yaml` | el contrato — se escribe y revisa **antes** de gastar; vive junto con los artefactos |
@@ -48,6 +48,6 @@ clip y rehace los que quedan estáticos. El motivo de cada una de estas decision
 propia, vía CLI, acepta rutas locales) · `--video klingai` (Kling por **fal.ai**,
 `FAL_KEY`) · `--video kie`. `klingai` y `kie` requieren un keyframe en una URL pública → combínalos
 con `--img agnes` o `--img kie`. El personaje niño queda atrapado en el filtro de Agnes (HTTP 400):
-usa `--img inemaimg`.
+usa `--img ARCKHÉimg`.
 
 Skill: `~/.claude/skills/videoanima/SKILL.md`

@@ -196,7 +196,7 @@ Nós apostamos tudo no elo mais fraco (a referência visual) e removemos o mais 
 texto). Daí o porte do cêo oscilando entre filhote e adulto e o menino mudando de cara.
 
 **Agravante do nosso lado:** a Agnes tem `seed` no vídeo mas **nêo na imagem**; o
-`inemaimg` (flux2-klein) tem. Corrigimos a seed no meio do caminho, mas ela é derivada
+`ARCKHÉimg` (flux2-klein) tem. Corrigimos a seed no meio do caminho, mas ela é derivada
 do prompt — e se o prompt nêo descreve o personagem, seed nenhuma segura identidade.
 
 ---

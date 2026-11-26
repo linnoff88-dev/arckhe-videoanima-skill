@@ -9,13 +9,13 @@ formato:
   size: "736x1312"     # 9:16 vertical. 16:9 seria "1312x736".
   fps: 24
 
-voz: rachel            # inemavox / chatterbox
+voz: rachel            # ARCKHÉvox / chatterbox
 
 look:
   global: sertao-golden-hour     # chave de gramatica.LOOKS ou texto livre em ingles
 
 audio:
-  trilha: ""           # caminho de um .mp3/.wav; baixe pelo inemavox/dlp
+  trilha: ""           # caminho de um .mp3/.wav; baixe pelo ARCKHÉvox/dlp
                        # (montagem.baixar_audio) — a musica abaixa sozinha sob a fala
 
 # Personagens: descricao FIXA em ingles, repetida literal em todo plano que os usa.
