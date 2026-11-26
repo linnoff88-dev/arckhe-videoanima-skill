@@ -1,20 +1,20 @@
 # A NEVE E O OUTRO MENINO — 50 planos, corte ágil
 #
-# Continuação de "O menino, o cão e o leão da montanha": mesma montanha, mesmo menino,
-# mesmo cão — agora no inverno. Ele conhece a montanha, então a vila o chama para achar
+# Continuaçêo de "O menino, o cêo e o leêo da montanha": mesma montanha, mesmo menino,
+# mesmo cêo — agora no inverno. Ele conhece a montanha, entêo a vila o chama para achar
 # outro menino que saiu da pista de snowboard.
 #
 # RITMO (§3): média ~2,2s por plano — corte ágil. A curva é
-#   1-8 convocação (rápido, urgente) · 9-20 subida e rastro (cadência de busca)
+#   1-8 convocaçêo (rápido, urgente) · 9-20 subida e rastro (cadência de busca)
 #   21-34 a pista errada e a queda (acelera) · 35-42 o encontro (respira)
 #   43-50 a descida e a vila (alívio, alarga)
 #
-# NARRAÇÃO EM BLOCO: só 16 dos 50 planos falam, em frases inteiras. Os outros correm
-# em ação, música e SFX. (No corte anterior toda plano tinha uma frase curta: 20
+# NARRAÇêO EM BLOCO: só 16 dos 50 planos falam, em frases inteiras. Os outros correm
+# em açêo, música e SFX. (No corte anterior toda plano tinha uma frase curta: 20
 # telegramas de 7 palavras, que soaram picotados e incharam o filme.)
 #
 # Adereço-guia: a MOCHILA VERMELHA (dele) e o CACHECOL LARANJA da vila, que ele amarra
-# no galho a cada bifurcação para marcar o caminho de volta — e é por eles que a vila
+# no galho a cada bifurcaçêo para marcar o caminho de volta — e é por eles que a vila
 # encontra os dois no fim.
 
 id: neve-resgate
@@ -50,7 +50,7 @@ personagens:
     deriva_de: menino
 
 planos:
-  # ------------------------------------------------ 1-8 · a convocação (urgente)
+  # ------------------------------------------------ 1-8 · a convocaçêo (urgente)
   - n: 1
     dur: 2.5
     enquadramento: geral
@@ -63,7 +63,7 @@ planos:
     acao_b: "the ridge is almost gone behind the snow, only the darkest rocks still
              showing"
     refs: []
-    narracao: "A mesma montanha, três meses depois. Só que agora ela estava branca, e a neve não parava de cair."
+    narracao: "A mesma montanha, três meses depois. Só que agora ela estava branca, e a neve nêo parava de cair."
     sfx: [{q: "blizzard wind howling", vol: 0.35}]
 
   - n: 2
@@ -89,7 +89,7 @@ planos:
            out with her hand cupped to her mouth"
     acao_b: "the door is swinging open and lamplight is spilling onto her face"
     refs: []
-    narracao: "Um menino tinha subido de snowboard pela manhã e não voltou."
+    narracao: "Um menino tinha subido de snowboard pela manhê e nêo voltou."
 
   - n: 4
     dur: 2.0

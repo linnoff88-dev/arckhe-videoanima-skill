@@ -223,7 +223,7 @@ def main():
         if alvo:
             print(f'  ⚠️  personagem-criança na Agnes ({alvo}): o filtro de conteúdo '
                   f'bloqueia (400).\n      Use --img inemaimg (local, sem filtro) '
-                  f'ou reescreva como personagem não-humano.')
+                  f'ou reescreva como personagem nêo-humano.')
     for p in elenco + ambientes:
         pid, png = p['id'], f"{D}/img/anc-{p['id']}.png"
         if pid in E['urls'] and os.path.exists(png):
@@ -248,7 +248,7 @@ def main():
     if faltam:
         return print(f'\n  ✗ âncora(s) sem imagem: {faltam}\n'
                      f'    Rode de novo — o que já ficou pronto é pulado.\n'
-                     f'    (a Agnes devolve ~34% de 503; o retry às vezes não basta)')
+                     f'    (a Agnes devolve ~34% de 503; o retry às vezes nêo basta)')
 
     # -------- 2. KEYFRAMES A e B de cada plano
     # Dois frames por plano porque o movimento de camera E a diferenca entre eles
@@ -325,7 +325,7 @@ def main():
                           'prompt': (G.prompt_de_video_minimo if a.prompt_minimo else G.prompt_de_video)(pl),
                           'seg': max(1.0, pl['dur'] * fator)})
         if itens:
-            print(f'  {len(itens)} clipes em lote (5/min de teto na criação)')
+            print(f'  {len(itens)} clipes em lote (5/min de teto na criaçêo)')
             mv = clipes_lote_agnes(itens)
             if mv:
                 print(f'  movimento médio: {sum(mv.values())/len(mv):.2f}')
@@ -409,7 +409,7 @@ def main():
         print(f'  [sfx] {q} {"ok" if M.baixar_audio(q, arq, max_seg=45) else "FALHOU"}')
 
     # -------- 4. NARRACAO (encaixada na linha do tempo, ja com os clipes prontos)
-    print('\n[4/5] NARRAÇÃO')
+    print('\n[4/5] NARRAÇêO')
     voz = S.get('voz', 'rachel')
     E.setdefault('revisao', {})
     for pl in planos:
@@ -422,7 +422,7 @@ def main():
             continue
         txt_rev, mud = revisar(txt)
         if mud:
-            print(f'  [p{n:02d}] revisão:', '; '.join(f'"{x}"→"{y}"' for x, y in mud))
+            print(f'  [p{n:02d}] revisêo:', '; '.join(f'"{x}"→"{y}"' for x, y in mud))
             E['revisao'][str(n)] = [list(m) for m in mud]; salvar()
         d = narrar(wav, txt_rev, voz=voz)
         if d:
@@ -444,7 +444,7 @@ def main():
     faltando = [p['n'] for p in planos if not os.path.exists(f"{VD}/p{p['n']:02d}.mp4")]
     if faltando:
         print(f'  ⚠️  {len(faltando)} plano(s) sem clipe e FORA do filme: {faltando}')
-        print('      (rode de novo — as etapas prontas são puladas)')
+        print('      (rode de novo — as etapas prontas sêo puladas)')
     final = M.montar(D, planos, S, f'filme-{nome}-{os.path.basename(VD)[6:]}', vdir=VD)
     print(f'\n>> {final}' if final else '\n>> nada montado')
 

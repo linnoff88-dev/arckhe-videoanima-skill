@@ -3,7 +3,7 @@
 # Colunas espelham §2 do doc de referencia (doc/analise-estilo-fbvideo.md).
 
 id: exemplo
-titulo: "O reencontro no sertão"
+titulo: "O reencontro no sertêo"
 
 formato:
   size: "736x1312"     # 9:16 vertical. 16:9 seria "1312x736".
@@ -23,7 +23,7 @@ audio:
 # porque gerar em paralelo produz individuos diferentes.
 personagens:
   - id: menino
-    prompt: "A seven-year-old Brazilian boy from the sertão, short dark hair, worn
+    prompt: "A seven-year-old Brazilian boy from the sertêo, short dark hair, worn
              yellow t-shirt, blue shorts, flip-flops, thin build, warm brown skin"
     deriva_de:
   - id: cao
@@ -78,7 +78,7 @@ planos:
     transicao_saida: corte
     acao: "Silhouette of the boy hugging the old man against the setting sun"
     refs: [menino]
-    narracao: "E o sertão inteiro pareceu ficar em silêncio."
+    narracao: "E o sertêo inteiro pareceu ficar em silêncio."
     texto_tela:
       estilo: estatico
-      conteudo: "uma história do sertão"
+      conteudo: "uma história do sertêo"

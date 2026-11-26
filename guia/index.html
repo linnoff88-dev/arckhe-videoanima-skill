@@ -126,27 +126,27 @@
 <a class="btn ghost" href="https://github.com/inematds/videoanima-skill" rel="noopener" target="_blank">Ver no GitHub</a>
 </div>
 </div>
-<figure><img alt="Câmera de cinema sobre dolly, ilustração da capa do videoanima." src="assets/hero.png"/></figure>
+<figure><img alt="Câmera de cinema sobre dolly, ilustraçêo da capa do videoanima." src="assets/hero.png"/></figure>
 </div>
 </header>
 <section id="oque"><div class="wrap">
 <span class="chip">O que é</span>
-<h2>Um pipeline de direção, não um gerador de clipes soltos</h2>
+<h2>Um pipeline de direçêo, nêo um gerador de clipes soltos</h2>
 <p class="sub">A diferença entre um filme e um slideshow está na decupagem: cada plano sabe o seu enquadramento, o seu movimento e onde o gesto termina. É isso que o videoanima escreve antes de gerar qualquer imagem.</p>
 <div class="grid g3">
-<div class="card"><h3>🎞️ Gramática de direção</h3><p>Enquadramento, ângulo, movimento, velocidade, look e ritmo viram fragmentos de prompt — vocabulário destilado de uma análise de estilo, não adjetivos improvisados.</p></div>
+<div class="card"><h3>🎞️ Gramática de direçêo</h3><p>Enquadramento, ângulo, movimento, velocidade, look e ritmo viram fragmentos de prompt — vocabulário destilado de uma análise de estilo, nêo adjetivos improvisados.</p></div>
 <div class="card"><h3>🔀 Provedores trocáveis</h3><p>Imagem em <code>agnes</code>, <code>inemaimg</code> ou <code>kie</code>; vídeo em <code>agnes</code>, <code>kling</code>, <code>klingai</code> ou <code>kie</code>. Cada armadilha medida mora no adaptador dela.</p></div>
-<div class="card"><h3>🎯 Portão de movimento</h3><p>Cada clipe é medido depois de gerado; o que sai parado é refeito. Há negative prompt contra <code>still frame</code> e keyframes A/B para o gerador ter o que animar.</p></div>
+<div class="card"><h3>🎯 Portêo de movimento</h3><p>Cada clipe é medido depois de gerado; o que sai parado é refeito. Há negative prompt contra <code>still frame</code> e keyframes A/B para o gerador ter o que animar.</p></div>
 </div>
 <div class="aviso">
-<strong>⚠️ Em ajuste — não é versão estável.</strong>
-<p>O pipeline roda ponta a ponta, mas está em ciclo aberto de correção a partir dos filmes que ele mesmo produziu. O primeiro corte saiu ruim (cenas paradas, personagem inconsistente, narração picotada) — o que foi medido e o que mudou por causa disso está no post-mortem <code>doc/pos-mortem-montanha-leao.md</code>. Ainda em aberto: a narração estica os planos além do ritmo planejado, os SFX entram sem audição prévia, e a referência encadeada entre planos (plano N usando o N−1) não foi implementada.</p>
+<strong>⚠️ Em ajuste — nêo é versêo estável.</strong>
+<p>O pipeline roda ponta a ponta, mas está em ciclo aberto de correçêo a partir dos filmes que ele mesmo produziu. O primeiro corte saiu ruim (cenas paradas, personagem inconsistente, narraçêo picotada) — o que foi medido e o que mudou por causa disso está no post-mortem <code>doc/pos-mortem-montanha-leao.md</code>. Ainda em aberto: a narraçêo estica os planos além do ritmo planejado, os SFX entram sem audiçêo prévia, e a referência encadeada entre planos (plano N usando o N−1) nêo foi implementada.</p>
 </div>
 </div></section>
 <section id="fluxo"><div class="wrap">
 <span class="chip">Como funciona</span>
 <h2>Seis etapas, idempotentes, cada uma pulando o que já existe em disco</h2>
-<p class="sub">Tudo mora no output: um id solto resolve para <code>~/projetos/output/videoanima/&lt;id&gt;/decupagem.yaml</code>. O <code>historias/&lt;id&gt;/</code> do repo é só semente — na primeira execução a decupagem é copiada para o output, e a de lá passa a ser a viva.</p>
+<p class="sub">Tudo mora no output: um id solto resolve para <code>~/projetos/output/videoanima/&lt;id&gt;/decupagem.yaml</code>. O <code>historias/&lt;id&gt;/</code> do repo é só semente — na primeira execuçêo a decupagem é copiada para o output, e a de lá passa a ser a viva.</p>
 <div class="flow">
 <span>Decupagem YAML</span><span class="arr">→</span>
 <span>Sanidade de ritmo</span><span class="arr">→</span>
@@ -154,24 +154,24 @@
 <span>Keyframes A e B</span><span class="arr">→</span>
 <span>Clipes</span><span class="arr">→</span>
 <span>Trilha e SFX</span><span class="arr">→</span>
-<span>Narração</span><span class="arr">→</span>
+<span>Narraçêo</span><span class="arr">→</span>
 <span>Montagem</span>
 </div>
 <div class="grid g3" style="margin-top:26px">
 <div class="card"><span class="num">1</span><h3>Antes de gastar</h3><p>A sanidade de ritmo roda primeiro e o preview de custo aparece antes da primeira chamada paga. <code>--so-decupagem</code> valida sem gerar nada.</p></div>
 <div class="card"><span class="num">2</span><h3>Consistência de personagem</h3><p>Uma âncora vai em text2img e as demais derivam dela por img2img — gerar em paralelo produziria indivíduos diferentes, porque nenhum desses geradores tem seed de identidade.</p></div>
-<div class="card"><span class="num">3</span><h3>O que o gerador não faz</h3><p>Slow e speed-ramp, handheld, zoom-punch, trilha com ducking, SFX e loudnorm entram na montagem, em ffmpeg.</p></div>
+<div class="card"><span class="num">3</span><h3>O que o gerador nêo faz</h3><p>Slow e speed-ramp, handheld, zoom-punch, trilha com ducking, SFX e loudnorm entram na montagem, em ffmpeg.</p></div>
 </div>
 </div></section>
 <section id="pre"><div class="wrap">
 <span class="chip">Pré-requisitos</span>
 <h2>O que precisa estar no ar</h2>
-<p class="sub">Python 3 e ffmpeg são obrigatórios. Os serviços locais e as chaves dependem dos provedores que você escolher.</p>
+<p class="sub">Python 3 e ffmpeg sêo obrigatórios. Os serviços locais e as chaves dependem dos provedores que você escolher.</p>
 <div class="grid g3">
-<div class="card"><h3>ffmpeg + Python 3</h3><p>A montagem inteira é ffmpeg. Sem ele o filme não fecha.</p><pre><span class="c"># confira</span>
+<div class="card"><h3>ffmpeg + Python 3</h3><p>A montagem inteira é ffmpeg. Sem ele o filme nêo fecha.</p><pre><span class="c"># confira</span>
 <span class="k">ffmpeg -version</span>
 <span class="k">python3 --version</span></pre></div>
-<div class="card"><h3>inemavox (narração)</h3><p>TTS local em <code>localhost:8010</code>, engine chatterbox. A voz vem da decupagem (<code>voz:</code>).</p><pre><span class="c"># precisa responder</span>
+<div class="card"><h3>inemavox (narraçêo)</h3><p>TTS local em <code>localhost:8010</code>, engine chatterbox. A voz vem da decupagem (<code>voz:</code>).</p><pre><span class="c"># precisa responder</span>
 <span class="k">curl</span> <span class="s">localhost:8010/health</span></pre></div>
 <div class="card"><h3>inemaimg (opcional)</h3><p>Servidor de imagem local em <code>localhost:8000</code>. Necessário para <code>--img inemaimg</code> — o caminho para personagem criança, que cai no filtro da Agnes.</p><pre><span class="c"># só se for usar --img inemaimg</span>
 <span class="k">curl</span> <span class="s">localhost:8000/health</span></pre></div>
@@ -180,7 +180,7 @@
 <div class="card"><h3>Chaves de provedor</h3><p>Lidas em runtime dos <code>.env</code> do ecossistema — nada é copiado para o repo.</p><pre><span class="c"># AGNES_API_KEY, KIE_API_KEY, FAL_KEY</span>
 <span class="c"># em ~/projetos/openpcbotv2/.env</span>
 <span class="c"># ou ~/projetos/wifi/.env</span></pre></div>
-<div class="card"><h3>Combinações que exigem URL pública</h3><p><code>klingai</code> e <code>kie</code> precisam do keyframe numa URL pública — combine com <code>--img agnes</code> ou <code>--img kie</code>.</p><pre><span class="c"># combinação válida</span>
+<div class="card"><h3>Combinações que exigem URL pública</h3><p><code>klingai</code> e <code>kie</code> precisam do keyframe numa URL pública — combine com <code>--img agnes</code> ou <code>--img kie</code>.</p><pre><span class="c"># combinaçêo válida</span>
 <span class="k">--img kie --video klingai</span></pre></div>
 </div>
 </div></section>
@@ -190,12 +190,12 @@
 <p class="sub">Todos os comandos rodam da raiz do repo. A ordem importa: valide o ritmo e o custo antes de qualquer chamada paga.</p>
 <div class="step"><div class="b">1</div><div>
 <h3>Valide a decupagem sem gastar</h3>
-<p>Roda a sanidade de ritmo e mostra o preview de custo. Não gera imagem, clipe nem áudio.</p>
-<pre><span class="k">python3 rodar.py exemplo --so-decupagem</span>  <span class="c"># valida ritmo + custo, não gasta</span></pre>
+<p>Roda a sanidade de ritmo e mostra o preview de custo. Nêo gera imagem, clipe nem áudio.</p>
+<pre><span class="k">python3 rodar.py exemplo --so-decupagem</span>  <span class="c"># valida ritmo + custo, nêo gasta</span></pre>
 </div></div>
 <div class="step"><div class="b">2</div><div>
 <h3>Edite a decupagem viva</h3>
-<p>A primeira execução copia a semente do repo para o output. A partir daí, edite a do output — é ela que vale.</p>
+<p>A primeira execuçêo copia a semente do repo para o output. A partir daí, edite a do output — é ela que vale.</p>
 <pre><span class="c"># semente no repo (só a primeira vez)</span>
 historias/exemplo/
 
@@ -209,7 +209,7 @@ historias/exemplo/
 </div></div>
 <div class="step"><div class="b">4</div><div>
 <h3>Rode o pipeline completo</h3>
-<p>Escolha os provedores de imagem e vídeo. O padrão de ambos é <code>agnes</code> (custo US$ 0, submissão em lote).</p>
+<p>Escolha os provedores de imagem e vídeo. O padrêo de ambos é <code>agnes</code> (custo US$ 0, submissêo em lote).</p>
 <pre><span class="k">python3 rodar.py exemplo --img agnes --video agnes</span>
 
 <span class="c"># Kling via fal.ai, com keyframe em URL pública</span>
@@ -221,8 +221,8 @@ historias/exemplo/
 <pre><span class="k">python3 rodar.py minha-historia --img inemaimg --video agnes</span></pre>
 </div></div>
 <div class="step"><div class="b">6</div><div>
-<h3>Sem confirmação e com prompt mínimo</h3>
-<p><code>--sim</code> não pergunta antes de gastar. <code>--prompt-minimo</code> manda só a ordem de movimento ao gerador de vídeo — útil quando o prompt longo está atrapalhando a animação.</p>
+<h3>Sem confirmaçêo e com prompt mínimo</h3>
+<p><code>--sim</code> nêo pergunta antes de gastar. <code>--prompt-minimo</code> manda só a ordem de movimento ao gerador de vídeo — útil quando o prompt longo está atrapalhando a animaçêo.</p>
 <pre><span class="k">python3 rodar.py exemplo --sim --prompt-minimo</span></pre>
 </div></div>
 <div class="step"><div class="b">7</div><div>
@@ -236,22 +236,22 @@ historias/exemplo/
 <section id="exemplos"><div class="wrap">
 <span class="chip">Exemplos</span>
 <h2>Filmes que saíram do pipeline</h2>
-<p class="sub">Quadros dos filmes verticais produzidos durante o ciclo de correção — os mesmos que alimentaram o post-mortem.</p>
+<p class="sub">Quadros dos filmes verticais produzidos durante o ciclo de correçêo — os mesmos que alimentaram o post-mortem.</p>
 <div class="ex">
-<figure><img alt="Quadro do filme montanha-leao-v2: menino de mochila e cachorro no alto de uma montanha ao entardecer." src="assets/ex1.jpg"/><figcaption><strong>montanha-leao-v2</strong> — a versão refeita depois do post-mortem, com look por bloco para a luz não sair de meio-dia na chegada noturna.</figcaption></figure>
-<figure><img alt="Quadro do filme neve-resgate: menino de casaco vermelho avançando na neve entre lampiões acesos." src="assets/ex2.jpg"/><figcaption><strong>neve-resgate</strong> — v3, com <code>tipo_plano</code> e a bíblia de ambientes; o plano de estado não vai a gerador nenhum.</figcaption></figure>
+<figure><img alt="Quadro do filme montanha-leao-v2: menino de mochila e cachorro no alto de uma montanha ao entardecer." src="assets/ex1.jpg"/><figcaption><strong>montanha-leao-v2</strong> — a versêo refeita depois do post-mortem, com look por bloco para a luz nêo sair de meio-dia na chegada noturna.</figcaption></figure>
+<figure><img alt="Quadro do filme neve-resgate: menino de casaco vermelho avançando na neve entre lampiões acesos." src="assets/ex2.jpg"/><figcaption><strong>neve-resgate</strong> — v3, com <code>tipo_plano</code> e a bíblia de ambientes; o plano de estado nêo vai a gerador nenhum.</figcaption></figure>
 </div>
 </div></section>
 <section id="roadmap"><div class="wrap">
 <span class="chip">Roadmap</span>
 <h2>O que já mudou e o que ainda está aberto</h2>
 <p class="sub">O roadmap é dirigido pelos defeitos medidos nos próprios filmes — cada item nasceu de um corte que saiu errado.</p>
-<div class="phase"><div class="tag">Feito</div><div class="d"><strong>Movimento medido, não prometido</strong><span>Keyframes A e B por plano, negative prompt contra <code>still frame</code> e um portão que mede o movimento do clipe e refaz o que sair parado.</span></div></div>
-<div class="phase"><div class="tag">Feito</div><div class="d"><strong>v3: tipo de plano e look por bloco</strong><span><code>tipo_plano: tableau</code> não vai a gerador de vídeo — a câmera se move sobre a imagem parada. <code>blocos</code> pinta a faixa de planos com o look certo, em vez de os 50 planos herdarem um "daylight" global.</span></div></div>
+<div class="phase"><div class="tag">Feito</div><div class="d"><strong>Movimento medido, nêo prometido</strong><span>Keyframes A e B por plano, negative prompt contra <code>still frame</code> e um portêo que mede o movimento do clipe e refaz o que sair parado.</span></div></div>
+<div class="phase"><div class="tag">Feito</div><div class="d"><strong>v3: tipo de plano e look por bloco</strong><span><code>tipo_plano: tableau</code> nêo vai a gerador de vídeo — a câmera se move sobre a imagem parada. <code>blocos</code> pinta a faixa de planos com o look certo, em vez de os 50 planos herdarem um "daylight" global.</span></div></div>
 <div class="phase"><div class="tag">Feito</div><div class="d"><strong>Áudio em camadas separadas</strong><span>Voz e leito deixaram de disputar a mesma trilha — o filme parou de sair mudo.</span></div></div>
-<div class="phase"><div class="tag">Aberto</div><div class="d"><strong>Narração x ritmo</strong><span>A narração ainda estica os planos além do ritmo planejado na decupagem.</span></div></div>
-<div class="phase"><div class="tag">Aberto</div><div class="d"><strong>SFX sem audição prévia</strong><span>Os efeitos entram no filme sem passar por uma escuta de conferência.</span></div></div>
-<div class="phase"><div class="tag">Aberto</div><div class="d"><strong>Referência encadeada</strong><span>O plano N usando o N−1 como referência ainda não foi implementado — é o caminho para a continuidade entre planos.</span></div></div>
+<div class="phase"><div class="tag">Aberto</div><div class="d"><strong>Narraçêo x ritmo</strong><span>A narraçêo ainda estica os planos além do ritmo planejado na decupagem.</span></div></div>
+<div class="phase"><div class="tag">Aberto</div><div class="d"><strong>SFX sem audiçêo prévia</strong><span>Os efeitos entram no filme sem passar por uma escuta de conferência.</span></div></div>
+<div class="phase"><div class="tag">Aberto</div><div class="d"><strong>Referência encadeada</strong><span>O plano N usando o N−1 como referência ainda nêo foi implementado — é o caminho para a continuidade entre planos.</span></div></div>
 </div></section>
 <footer>
 <div class="wrap">

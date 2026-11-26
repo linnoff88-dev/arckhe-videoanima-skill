@@ -259,7 +259,7 @@ def montar(D, planos, spec, base, vdir=None):
         print(f'   ⛔ {escritas} narrações escritas e NENHUMA entrou na mixagem — '
               f'o filme sairia mudo. Confira {D}/narracao/.')
     elif escritas and len(vozes) < escritas:
-        print(f'   ⚠️ {escritas - len(vozes)} de {escritas} narrações não entraram na '
+        print(f'   ⚠️ {escritas - len(vozes)} de {escritas} narrações nêo entraram na '
               f'mixagem (wav ausente ou plano fora do corte)')
     final = f'{D}/{base}.mp4'
     LOUD = 'loudnorm=I=-14:TP=-1.5:LRA=11'
@@ -388,7 +388,7 @@ def baixar_audio(consulta, dest, tipo='sfx', max_seg=None):
 
 
 def folha_roteiro(D, planos, dest, colunas=5, larg=300):
-    """Folha de contato ANOTADA: cada quadro com a ação e a narração embaixo.
+    """Folha de contato ANOTADA: cada quadro com a açêo e a narraçêo embaixo.
 
     A folha simples (`folha_de_contato`) prova continuidade visual, mas nao deixa
     conferir se a imagem bate com a HISTORIA — e esse e o erro caro, porque so aparece

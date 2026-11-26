@@ -21,31 +21,31 @@ REGRAS = """Você escreve DECUPAGEM CINEMATOGRÁFICA para um pipeline que transf
 texto em filme animado vertical. A saída é YAML puro, sem comentários fora do YAML e
 sem texto antes ou depois.
 
-REGRAS MEDIDAS (não são preferências — cada uma corrigiu um defeito real):
+REGRAS MEDIDAS (nêo sêo preferências — cada uma corrigiu um defeito real):
 
 1. A IMAGEM MANDA. O gerador de vídeo recebe dois keyframes (A e B) e interpola entre
-   eles. Prompt longo não muda o resultado (medido: 1,4% de diferença). O que cria
+   eles. Prompt longo nêo muda o resultado (medido: 1,4% de diferença). O que cria
    movimento é a DIFERENÇA entre A e B.
 2. `acao` em INGLÊS, com VERBO CONTÍNUO, descrevendo movimento ("The dog is bounding
    down the slope in long leaps"), nunca um quadro parado ("A dog on a slope").
 3. `acao_b` em INGLÊS: onde o gesto TERMINA. É o keyframe B. Sem isso o clipe sai
    parado.
-4. NUNCA use negação ("no people", "without", "nothing"). A negação vira atrator e traz
+4. NUNCA use negaçêo ("no people", "without", "nothing"). A negaçêo vira atrator e traz
    justamente o que se quer evitar. Descreva o que ESTÁ no quadro.
 5. `tipo_plano`:
    - `acao` → alguém executa algo (vai para o gerador de vídeo);
    - `revelacao` → a câmera mostra o que já estava lá;
    - `tableau` → estado, objeto parado, atmosfera.
-   Objeto largado, paisagem vazia e rosto parado são `tableau` ou `revelacao` — se
+   Objeto largado, paisagem vazia e rosto parado sêo `tableau` ou `revelacao` — se
    mandados como `acao`, o gerador inventa mudança (uma prancha largada trocou de cor).
 6. Contato físico próximo entre crianças (abraço, braço no ombro, animal no colo) é
    BLOQUEADO pelo filtro de conteúdo. Componha com distância, de costas ou em silhueta.
 7. `narracao` em PORTUGUÊS, só em alguns planos, em frases inteiras (25 a 40 palavras).
-   Narrar todo plano com frase curta deixa a locução picotada.
+   Narrar todo plano com frase curta deixa a locuçêo picotada.
 8. Ritmo: média de 2 a 4 segundos por plano. Alternar escalas (detalhe/close/medio/geral)
    é o que cria ritmo visual.
-9. Continuidade: um adereço-guia que atravessa a história; direção de movimento
-   constante; e `look` por bloco de tempo (manhã → tarde → pôr do sol → noite).
+9. Continuidade: um adereço-guia que atravessa a história; direçêo de movimento
+   constante; e `look` por bloco de tempo (manhê → tarde → pôr do sol → noite).
 
 ESQUEMA EXATO:
 
@@ -56,11 +56,11 @@ voz: bella
 biblia:
   personagens:
     - id: <slug>
-      imutavel: "<descrição física e figurino fixos, em inglês, 25-40 palavras>"
+      imutavel: "<descriçêo física e figurino fixos, em inglês, 25-40 palavras>"
       deriva_de:            # id de outro personagem, ou vazio
   ambientes:
     - id: <slug>
-      imutavel: "<descrição do lugar, em inglês>"
+      imutavel: "<descriçêo do lugar, em inglês>"
 blocos:
   - id: <slug>
     planos: [1, 8]
@@ -110,7 +110,7 @@ def auditar(S):
     p = [f'planos: {len(planos)}']
     if planos:
         durs = [x.get('dur', 0) for x in planos]
-        p.append(f'duração: {sum(durs):.0f}s · média {st.mean(durs):.1f}s/plano')
+        p.append(f'duraçêo: {sum(durs):.0f}s · média {st.mean(durs):.1f}s/plano')
         tipos = {}
         for x in planos:
             tipos[x.get('tipo_plano', 'ausente')] = tipos.get(x.get('tipo_plano', 'ausente'), 0) + 1
@@ -120,7 +120,7 @@ def auditar(S):
         falas = [x for x in planos if (x.get('narracao') or '').strip()]
         if falas:
             pal = [len(x['narracao'].split()) for x in falas]
-            p.append(f'narração: {len(falas)}/{len(planos)} planos · {st.mean(pal):.1f} palavras/bloco')
+            p.append(f'narraçêo: {len(falas)}/{len(planos)} planos · {st.mean(pal):.1f} palavras/bloco')
         ids = {c['id'] for c in (S.get('biblia', {}).get('personagens') or [])}
         ruins = sorted({r for x in planos for r in (x.get('refs') or []) if r not in ids})
         p.append(f'refs inválidas: {ruins or "nenhuma"}')

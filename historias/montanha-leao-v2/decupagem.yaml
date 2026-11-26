@@ -1,20 +1,20 @@
-# O MENINO, O CÃO E O LEÃO DA MONTANHA — v2 (corte de movimento)
+# O MENINO, O CêO E O LEêO DA MONTANHA — v2 (corte de movimento)
 #
-# O que mudou em relação à v1 (ver doc/pos-mortem-montanha-leao.md):
+# O que mudou em relaçêo à v1 (ver doc/pos-mortem-montanha-leao.md):
 #   - toda `acao` agora é VERBO CONTÍNUO, como a coluna "O que aparece" do filme de
-#     referência (pés correndo, saltando a cerca, caindo de joelhos), e não descrição
+#     referência (pés correndo, saltando a cerca, caindo de joelhos), e nêo descriçêo
 #     de quadro parado;
-#   - cada plano ganhou `acao_b`: onde a ação TERMINA. É o que o keyframe B tem que
+#   - cada plano ganhou `acao_b`: onde a açêo TERMINA. É o que o keyframe B tem que
 #     mostrar e o que o gerador de vídeo tem que percorrer. Sem isso A e B saíam quase
 #     iguais e o clipe vinha parado (8 de 20 planos abaixo de 2,0 de movimento);
-#   - `texto_tela` removido — era gramática de anúncio, não de história.
+#   - `texto_tela` removido — era gramática de anúncio, nêo de história.
 #
 # Continuidade: corrida única, sem elipse. Menino sempre da esquerda para a direita,
-# leão vindo por trás. Adereço-guia: a MOCHILA VERMELHA (plano 1, perdida no 11,
+# leêo vindo por trás. Adereço-guia: a MOCHILA VERMELHA (plano 1, perdida no 11,
 # reencontrada no 19).
 
 id: montanha-leao-v2
-titulo: "O menino, o cão e o leão da montanha"
+titulo: "O menino, o cêo e o leêo da montanha"
 
 formato:
   size: "736x1312"
@@ -87,7 +87,7 @@ planos:
     acao_b: "the boy has completed the turn and stands facing the other way, arms
              dropping, the dog now on his other side"
     refs: [menino, cao]
-    narracao: "Ele girou duas vezes procurando a marca amarela nas pedras. Não achou nenhuma."
+    narracao: "Ele girou duas vezes procurando a marca amarela nas pedras. Nêo achou nenhuma."
 
   - n: 4
     dur: 3.0
@@ -119,7 +119,7 @@ planos:
     refs: [leao]
     narracao: "E lá embaixo, entre os pinheiros, alguma coisa também tinha parado pra olhar pra eles."
 
-  # -------------------------------------- 6-15 · a perseguição (rápido, sem folga)
+  # -------------------------------------- 6-15 · a perseguiçêo (rápido, sem folga)
   - n: 6
     dur: 2.0
     enquadramento: close
@@ -132,7 +132,7 @@ planos:
     acao_b: "the roar is at its peak, the mouth wide open filling the frame, the head
              pushed forward toward the camera"
     refs: [leao]
-    narracao: "Um leão da montanha."
+    narracao: "Um leêo da montanha."
     sfx: [{q: "mountain lion roar", vol: 0.6}]
 
   - n: 7
@@ -224,7 +224,7 @@ planos:
     acao_b: "both have stopped at the very lip of the gorge, the boy leaning forward
              with a hand on the trunk, looking across"
     refs: [menino, cao]
-    narracao: "O caminho terminava num tronco caído sobre o abismo. Não tinha outro."
+    narracao: "O caminho terminava num tronco caído sobre o abismo. Nêo tinha outro."
 
   - n: 13
     dur: 3.5
@@ -303,7 +303,7 @@ planos:
     acao_b: "the lion is half swallowed by the dark pines, only its hind legs and tail
              still out of the shadow"
     refs: [leao]
-    narracao: "O leão andou de um lado pro outro, olhou uma última vez, e desistiu."
+    narracao: "O leêo andou de um lado pro outro, olhou uma última vez, e desistiu."
 
   - n: 18
     dur: 3.5

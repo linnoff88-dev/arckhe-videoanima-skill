@@ -1,17 +1,17 @@
-# O MENINO, O CÃO E O LEÃO DA MONTANHA — 20 planos
+# O MENINO, O CêO E O LEêO DA MONTANHA — 20 planos
 #
-# Continuidade: cada plano começa exatamente onde o anterior parou. A ação é uma
-# corrida única, sem elipse — por isso os planos herdam direção de movimento
-# (menino sempre correndo da esquerda para a direita, o leão vindo por trás) e o
+# Continuidade: cada plano começa exatamente onde o anterior parou. A açêo é uma
+# corrida única, sem elipse — por isso os planos herdam direçêo de movimento
+# (menino sempre correndo da esquerda para a direita, o leêo vindo por trás) e o
 # adereço-guia é a MOCHILA VERMELHA: ela aparece no plano 1, é perdida no 11 e
 # reaparece no 19. Objeto que atravessa a história é o que faz o espectador
 # sentir que é o mesmo dia, o mesmo menino.
 #
-# Curva de ritmo (§3 do doc): cadenciado (1-5) -> perseguição acelerada (6-15)
-# -> respiração e desfecho (16-20).
+# Curva de ritmo (§3 do doc): cadenciado (1-5) -> perseguiçêo acelerada (6-15)
+# -> respiraçêo e desfecho (16-20).
 
 id: montanha-leao
-titulo: "O menino, o cão e o leão da montanha"
+titulo: "O menino, o cêo e o leêo da montanha"
 
 formato:
   size: "736x1312"
@@ -108,7 +108,7 @@ planos:
       estilo: estatico
       conteudo: "corre"
 
-  # -------------------------------------- 6-15 · a perseguição (rápido, sem folga)
+  # -------------------------------------- 6-15 · a perseguiçêo (rápido, sem folga)
   - n: 6
     dur: 2.0
     enquadramento: close
@@ -119,7 +119,7 @@ planos:
     acao: "The mountain lion's scarred face filling the frame as it roars, cold dusk
            light in its eyes"
     refs: [leao]
-    narracao: "Um leão da montanha."
+    narracao: "Um leêo da montanha."
 
   - n: 7
     dur: 2.5
@@ -255,7 +255,7 @@ planos:
     acao: "Across the gorge the mountain lion paces once, watches, then turns and
            dissolves back into the pines"
     refs: [leao]
-    narracao: "O leão andou de um lado pro outro e desistiu."
+    narracao: "O leêo andou de um lado pro outro e desistiu."
 
   - n: 18
     dur: 3.5
